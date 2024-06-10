@@ -1,0 +1,45 @@
+
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Coffee Shop API",
+        "description": "API documentation for Coffee Shop application"
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "schemes": ["http"],
+    "paths": {
+        "/api/user": {
+            "post": {
+                "summary": "creating new user",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "username": {
+                                    "type": "string"
+                                },
+                                "email": {
+                                    "type": "string"
+                                },
+                                "password": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful created new user"
+                    }
+                }
+            }
+        }
+    }
+}
